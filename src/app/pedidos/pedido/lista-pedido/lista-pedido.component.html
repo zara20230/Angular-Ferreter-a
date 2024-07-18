@@ -1,0 +1,8 @@
+<div class="pedido-lista">
+  <h2>Lista de Pedidos</h2>
+  <ul>
+    <li *ngFor="let pedido of pedidos">
+      <a [routerLink]="['/pedidos/detalle', pedido.id]">{{ pedido.id }} - {{ pedido.fecha | date }}</a>
+    </li>
+  </ul>
+</div>

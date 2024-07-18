@@ -1,0 +1,12 @@
+<div *ngIf="pedido">
+  <h2>Detalle del Pedido {{ pedido.id }}</h2>
+  <p>Fecha: {{ pedido.fecha | date }}</p>
+  <p>Tipo de Entrega: {{ pedido.tipoEntrega }}</p>
+  <h3>Productos</h3>
+  <ul>
+    <li *ngFor="let producto of pedido.productos">
+      {{ producto.nombre }} - {{ producto.cantidad }} x {{ producto.precio | currency }}
+    </li>
+  </ul>
+  <p>Total: {{ pedido.total | currency }}</p>
+</div>

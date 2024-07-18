@@ -1,0 +1,7 @@
+<h2 [ngStyle]="headerStyle">{{ title }}</h2>
+<p [ngClass]="parrafoClass">Bienvenido a la tienda de herramientas y materiales de construcción</p>
+<button (click)="toggleVisibility()">{{ isListVisible ? 'Ocultar' : 'Mostrar' }} Lista</button>
+
+<ul *ngIf="isListVisible">
+  <li *ngFor="let item of materialsAndTools">{{ item }}</li>
+</ul>

@@ -1,0 +1,6 @@
+<div *ngIf="cliente">
+  <h2>Detalle del Cliente {{ cliente.nombre }} {{ cliente.apellidos }}</h2>
+  <p>Email: {{ cliente.email }}</p>
+  <p>Dirección: {{ cliente.direccion }}</p>
+  <p *ngIf="cliente.ruc">RUC: {{ cliente.ruc }}</p>
+</div>

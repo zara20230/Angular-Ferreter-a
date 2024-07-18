@@ -1,0 +1,8 @@
+<div class="cliente-lista">
+  <h2>Lista de Clientes</h2>
+  <ul>
+    <li *ngFor="let cliente of clientes">
+      <a [routerLink]="['/clientes/detalle', cliente.id]">{{ cliente }} {{ cliente.apellidos }}</a>
+    </li>
+  </ul>
+</div>
